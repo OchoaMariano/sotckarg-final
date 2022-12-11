@@ -432,18 +432,7 @@ if (isset($_POST['borrar'])) {
                           />
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="col mb-3">
-                          <label for="nameWithTitle" class="form-label">Fecha</label>
-                          <input
-                            name="fecha_n"
-                            type="date"
-                            id="nameWithTitle"
-                            class="form-control"
-                            placeholder="Ingrese la fecha del producto"
-                          />
-                        </div>
-                      </div>
+                      
                     
                     </div>
                     <div class="modal-footer">

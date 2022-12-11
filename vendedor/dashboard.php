@@ -26,6 +26,8 @@ JOIN Estado ON Operacion.id_estado = Estado.id
 WHERE Operacion.id_usuario_vendedor = '$user_id'
 GROUP BY Estado";
 $result = mysqli_query($conexion, $sql);
+$ventas = mysqli_fetch_assoc($result);
+$total_ventas = $ventas['total'];
 
 
 ?>
@@ -331,8 +333,8 @@ $result = mysqli_query($conexion, $sql);
                             
                           </div>
                           <span class="fw-semibold d-block mb-1">Ventas</span>
-                          <h3 class="card-title mb-2">$<?= $result; ?></h3>
-                          <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +72.80%</small>
+                          <h3 class="card-title mb-2">$<?php echo $total_ventas; ?></h3>
+                          <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i></small>
                         </div>
                       </div>
                     </div>
@@ -350,8 +352,8 @@ $result = mysqli_query($conexion, $sql);
                             
                           </div>
                           <span>Reservas</span>
-                          <h3 class="card-title text-nowrap mb-1">$4,679</h3>
-                          <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.42%</small>
+                          <h3 class="card-title text-nowrap mb-1">$<?php echo $total_reservas; ?></h3>
+                          <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i></small>
                         </div>
                       </div>
                     </div>
@@ -371,8 +373,8 @@ $result = mysqli_query($conexion, $sql);
                             
                           </div>
                           <span class="d-block mb-1">Canceladas</span>
-                          <h3 class="card-title text-nowrap mb-2">$2,456</h3>
-                          <small class="text-danger fw-semibold"><i class="bx bx-down-arrow-alt"></i> -14.82%</small>
+                          <h3 class="card-title text-nowrap mb-2">$<?php echo $total_cancelado; ?></h3>
+                          <small class="text-danger fw-semibold"><i class="bx bx-down-arrow-alt"></i> </small>
                         </div>
                       </div>
                     </div>
@@ -386,7 +388,7 @@ $result = mysqli_query($conexion, $sql);
                             
                           </div>
                           <span class="fw-semibold d-block mb-1">Mensajes</span>
-                          <h3 class="card-title mb-2">14</h3>
+                          <h3 class="card-title mb-2"><?php echo $total_mensajes; ?></h3>
                           <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> </small>
                         </div>
                       </div>

@@ -295,74 +295,11 @@ $operaciones = mysqli_fetch_all($result_op, MYSQLI_ASSOC);
                 <div class="col-8">
                 <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Operaciones /</span> Tus Operaciones</h4>
                 </div>
-                <div class="col-4">
-                  <button
-                  type="button"
-                  class="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#modalCenter"
-                  >
-                  Enviar nuevo mensaje
-                  </button>
-                </div>
+               
                 
                 
               </div>
-              
-              <!-- MODAL > AGREGAR PRODUCTO -->
-              <div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                <form method="post">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="modalCenterTitle">Enviar mensaje</h5>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">
-                    
-                      <div class="row g-2 mb-3">
-                        <div class="col mb-0">
-                          <label for="emailWithTitle" class="form-label">Nombre</label>
-                          <input
-                            name="nombre_user"
-                            type="text"
-                            id="emailWithTitle"
-                            class="form-control"
-                            placeholder="Ingrese el nombre del producto"
-                          />
-                        </div>
-                      </div>
-                      <div class="row g-2 mb-3">
-                        <div class="col mb-0">
-                          <label for="dobWithTitle" class="form-label">Mensaje</label>
-                          <textarea
-                            type="text"
-                            name="mensaje"
-                            id="dobWithTitle"
-                            class="form-control"
-                            placeholder="Ingrese la descripcion del producto"
-                          >
-                          </textarea>
-                        </div>
-                      </div>
-                      
-                    
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                        Close
-                      </button>
-                      <button type="submit" name="crear" class="btn btn-primary" data-bs-dismiss="modal">Enviar mensaje</button>
-                    </div>
-                  </form>
-                  </div>
-                </div>
-              </div>
+             
               
 
               <!-- Responsive Table -->
